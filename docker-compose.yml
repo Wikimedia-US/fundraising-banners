@@ -1,0 +1,16 @@
+version: '0'
+
+services:
+  js-build:
+    image: node:10
+    volumes:
+      - ./:/code
+      - ~/.npm:/npm-cache
+    working_dir: /code
+    environment:
+      - npm_config_cache=/npm-cache
+  js-serve:
+    extends: js-build
+    ports:
+      - "8084:8084"
+    command: "npm run start"
