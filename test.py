@@ -10,7 +10,7 @@ class LoginForm(unittest.TestCase):
     def setUp(self):
 
         # Put your username and authkey below
-        # You can find your authkey at crossbrowsertesting.com/account
+        # You can find your authkey at 
         self.username = os.environ.get('CBT_USERNAME')
         self.authkey  = os.environ.get('CBT_AUTHKEY')
 
